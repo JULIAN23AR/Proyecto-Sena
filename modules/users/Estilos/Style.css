@@ -1,0 +1,135 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #wrapper {
+    min-height: 100vh;
+  }
+
+  .sidebar-header {
+    background-color: #0b5ed7;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  .list-content li {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .list-content li i {
+    font-size: 16px;
+    color: #ffffff;
+    margin: 5px 0;
+  }
+  
+  .list-content li a {
+    flex: 1;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 5px 10px;
+  }
+  
+  .list-content li:hover {
+    background-color: #0b5ed7;
+  }
+  
+  #sidebar {
+    width: 240px;
+    min-height: 100vh;
+    transition: all 0.5s ease;
+  }
+  
+  #sidebar .active {
+    background-color: #0b5ed7;
+  }
+  
+  #page-content-wrapper {
+    flex: 1;
+    background-color: #05203c5a;
+    overflow-x: hidden;
+  }
+
+  .modal-backdrop.show {
+    opacity: 0.9 !important;
+    background-color: rgba(0, 0, 0, 0.9) !important;
+  }
+  
+
+  .modal-header {
+    background-color: #0b5ed7;
+  }
+
+  .modal-header h1 {
+    font-weight: bold;
+  }
+
+  .form-modal {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .form-modal .m-b3 {
+    display: flex;
+    flex-direction: column;
+  }
+
+.form-modal label {
+  font-weight: 300;
+  margin-bottom: 5px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+.form-modal input {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid gray;
+  font-size: 0.96rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-modal input:focus {
+  text-transform: none;
+  border: none;
+  border-bottom: 3px solid #0d6efd;
+  box-shadow: none;
+}
+
+.form-modal input[type="email"] {
+  text-transform: none;
+}
+
+  .navbar {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  .user-section {
+    width: 95%;
+    margin: 0 auto;
+    background-color: #212529;
+    border-radius: 10px;
+    padding: 2rem;
+    font-size: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  
+  .user-section h2 {
+    font-size: 2rem;
+    letter-spacing: 1px;
+  }
+  
+  /* .table th,
+  .table td {
+    vertical-align: middle;
+  } */
+  

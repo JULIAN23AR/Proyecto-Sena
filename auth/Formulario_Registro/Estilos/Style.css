@@ -1,0 +1,124 @@
+body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container-form {
+   width: 100%;
+   max-width: 650px;
+   border-radius: 15px;
+   padding: 20px;
+   background-color: #1e1e1e;
+   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.8);
+   transition: box-shadow 0.3s ease-in-out;   
+}
+
+@keyframes fadeInUp {
+    0% {opacity: 0; transform: translateY(20PX);}
+    100% {opacity: 1; transform: translateY(0);}
+}
+
+.container-form {
+    animation: fadeInUp 1s ease-out;
+}
+
+
+.icon-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.icon-form i {
+    color:#0d6efd;
+    transition: tranform 0.3s ease, color 0.3s ease;
+}
+
+.icon-form i:hover {
+    transform: rotate(15deg);
+    color: #f1f1f1;
+}
+
+.icon-form h1 {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #f1f1f1;
+}
+
+.form-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 15px;
+    width: auto
+}
+
+.form-label {
+    font-size: 15px;
+    color: #ffffff;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background-color: #2c2c2c;
+    color: #ffffff;
+    font-size: 16px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease-in-out;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: none;
+    transform: scale(1.02);
+}
+
+.form-control:valid {
+    border-color: #28a74691;
+}
+
+.form-control:invalid {
+    border-color: #dc354683;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.btn-primary {
+    background:linear-gradient(45deg, #0d6efd, #1a73e8);
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    padding: 12px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+
+.btn-primary:hover {
+   background: linear-gradient(45deg, #1a73e8, #0d6efd);
+   transform: scale(1.05);
+   box-shadow: 0 0 15px rgba(13, 110, 253, 0.5);
+}
+

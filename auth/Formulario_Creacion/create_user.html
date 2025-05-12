@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
+      rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/eeb2293ae5.js"
+      crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="../../auth/Formulario_Creacion/Estilos/Style.css" />
+    <title>Registro</title>
+  </head>
+  <body>
+    <div class="form-container">
+      <form action="../../modules/users/create_user.php" method="POST">
+        <div class="form-item">
+          <label for="documento" class="form-label">Documento</label>
+          <input
+            type="text"
+            class="form-control"
+            id="documento"
+            name="documento"
+            required
+            pattern="\d+"
+            title="No se permiten signos especiales" />
+        </div>
+
+        <div class="form-item">
+          <label for="nombre" class="form-label">Nombres</label>
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            name="nombre"
+            required />
+        </div>
+
+        <div class="form-item">
+          <label for="apellido" class="form-label">Apellidos</label>
+          <input
+            type="text"
+            class="form-control"
+            id="apellido"
+            name="apellido"
+            required />
+        </div>
+
+        <div class="form-item">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="telefono"
+            name="telefono"
+            pattern="[0-9]{10}"
+            placeholder="Ej: 3111234567" />
+        </div>
+
+        <div class="form-item">
+          <label for="correo_electronico" class="form-label"
+            >Correo Electrónico</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="correo_electronico"
+            name="correo_electronico"
+            required />
+        </div>
+
+        <div class="form-item">
+          <label for="contrasena" class="form-label">Contraseña</label>
+          <input
+            type="password"
+            class="form-control"
+            id="contrasena"
+            name="contrasena"
+            required
+            minlength="6"
+            placeholder="Mínimo 6 caracteres" />
+        </div>
+
+        <div class="form-item">
+          <label for="areas" class="form-label">Area</label>
+          <select
+            id="area"
+            name="area"
+            class="form-control"
+            aria-label="Selecciona el área del usuario">
+            <option value="" disabled selected>Seleccione su area</option>
+            <option value="Administrador">Administración</option>
+            <option value="Empleado">Tecnologias TIC</option>
+            <option value="Cliente">Ventas y Marketing</option>
+            <option value="Proveedor">Finanzas</option>
+            <option value="Contador">Recursos Humanos</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <label for="fecha_creacion" class="form-label"
+            >Fecha de Creación</label
+          >
+          <input
+            type="date"
+            class="form-control"
+            id="fecha_creacion"
+            name="fecha_creacion"
+            required />
+        </div>
+
+        <div class="form-item">
+          <label for="roles" class="form-label">Rol</label>
+          <select
+            id="roles"
+            name="rol"
+            class="form-control"
+            aria-label="Selecciona el rol del usuario">
+            <option value="" disabled selected>Seleccione un rol</option>
+            <option value="Cliente">Cliente</option>
+            <option value="Vendedor">Vendedor</option>
+            <option value="Empleado">Empleado</option>
+            <option value="Admin">Admin</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <label for="estado">Estado:</label>
+          <input
+            list="estados"
+            id="estado"
+            name="estado"
+            class="form-control"
+            placeholder="ACTIVO / INACTIVO"
+            required />
+          <datalist id="estados">
+            <option value="1">Activo</option>
+            <option value="0">Inactivo</option>
+          </datalist>
+        </div>
+
+        <div class="d-flex justify-content-between">
+          <button type="submit" class="btn btn-primary">Guardar</button>
+          <a href="../../modules/users/Index.php" class="btn btn-secondary"
+            >Cancelar</a
+          >
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
