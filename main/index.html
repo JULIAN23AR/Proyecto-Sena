@@ -1,9 +1,317 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio</title>
+    <link rel="stylesheet" href="../main/style.css" />
+    <title>InvoStore</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>InvoStore</h1>
+        <p>Soluciones integrales para grandes empresas</p>
+      </header>
+
+      <nav class="nav-categories">
+        <button class="category-btn active" onclick="showCategory('inicio')">
+          Inicio
+        </button>
+        <button class="category-btn" onclick="showCategory('tecnologia')">
+          Tecnologia
+        </button>
+        <button class="category-btn" onclick="showCategory('hogar')">
+          Hogar
+        </button>
+        <button class="category-btn" onclick="showCategory('accesorios')">
+          Accesorios
+        </button>
+        <button class="category-btn" onclick="showCategory('moda')">
+          Ropas y Calzado
+        </button>
+        <button class="category-btn login">Iniciar Sesión</button>
+      </nav>
+
+      <main class="content-area">
+        <div id="inicio" class="category-content active">
+          <div class="welcome-message">
+            <h2>Bienvenido a InvoStore</h2>
+            <p>
+              El proyecto InvoStore, es un sistema de facturación e inventario
+              dirigido a grandes empresas comercializadoras y distribuidoras de
+              todo tipo de productos, al igual tiene la capacidad de gestionar
+              la operatividad del personal en la empresa, gestionando perfiles,
+              cantidad de empleados en funcionamiento y no activos. Su objetivo
+              es evaluar la funcionalidad, seguridad y rendimiento del software,
+              asegurando que cumpla con los requerimientos previamente definidos
+              y proporcionando un producto de alta calidad a los clientes.
+            </p>
+          </div>
+        </div>
+
+        <div id="tecnologia" class="category-content">
+          <h2 style="text-align: center; margin-bottom: 30px; color: #123458">
+            Tuberías y Conductos
+          </h2>
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="product-image">🔧</div>
+              <div class="product-info">
+                <h3>Tuberías PVC</h3>
+                <p>
+                  Tuberías de PVC de alta resistencia para instalaciones de agua
+                  potable. Disponibles en diferentes diámetros y longitudes.
+                </p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">⚡</div>
+              <div class="product-info">
+                <h3>Tuberías HDPE</h3>
+                <p>
+                  Tuberías de polietileno de alta densidad, ideales para
+                  instalaciones subterráneas y de alta presión.
+                </p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">🔩</div>
+              <div class="product-info">
+                <h3>Tuberías Metálicas</h3>
+                <p>
+                  Tuberías de acero galvanizado y hierro fundido para
+                  aplicaciones industriales y de alta demanda.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="hogar" class="category-content">
+          <h2 style="text-align: center; margin-bottom: 30px; color: #123458">
+            Válvulas de Control
+          </h2>
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="product-image">🎛️</div>
+              <div class="product-info">
+                <h3>Válvulas de Compuerta</h3>
+                <p>
+                  Válvulas de compuerta para control total del flujo de agua.
+                  Fabricadas en bronce y acero inoxidable.
+                </p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">🔄</div>
+              <div class="product-info">
+                <h3>Válvulas de Bola</h3>
+                <p>
+                  Válvulas de bola de accionamiento rápido, perfectas para
+                  aplicaciones residenciales y comerciales.
+                </p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">⚙️</div>
+              <div class="product-info">
+                <h3>Válvulas Check</h3>
+                <p>
+                  Válvulas de retención que previenen el flujo inverso en
+                  sistemas de bombeo y distribución.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="accesorios" class="category-content">
+          <h2 style="text-align: center; margin-bottom: 30px; color: #123458">
+            Sistemas de Bombeo
+          </h2>
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="product-image">💪</div>
+              <div class="product-info">
+                <h3>Bombas Centrífugas</h3>
+                <p>
+                  Bombas centrífugas de alta eficiencia para sistemas de
+                  distribución de agua potable y riego.
+                </p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">🌊</div>
+              <div class="product-info">
+                <h3>Bombas Sumergibles</h3>
+                <p>
+                  Bombas sumergibles para pozos profundos y aplicaciones de
+                  extracción de agua subterránea.
+                </p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">🔋</div>
+              <div class="product-info">
+                <h3>Sistemas de Presión</h3>
+                <p>
+                  Equipos hidroneumáticos y sistemas de presión constante para
+                  edificaciones y complejos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="moda" class="category-content">
+          <h2 style="text-align: center; margin-bottom: 30px; color: #123458">
+            Accesorios y Conexiones
+          </h2>
+          <div class="product-grid">
+            <div class="product-card">
+              <div class="product-image">🔗</div>
+              <div class="product-info">
+                <h3>Conexiones y Codos</h3>
+                <p>
+                  Amplia variedad de conexiones, codos, tees y reductores para
+                  completar cualquier instalación.
+                </p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">📏</div>
+              <div class="product-info">
+                <h3>Medidores de Flujo</h3>
+                <p>
+                  Medidores de agua residenciales y comerciales con tecnología
+                  mecánica y digital.
+                </p>
+              </div>
+            </div>
+            <div class="product-card">
+              <div class="product-image">🛡️</div>
+              <div class="product-info">
+                <h3>Filtros y Purificadores</h3>
+                <p>
+                  Sistemas de filtración para mejorar la calidad del agua y
+                  proteger las instalaciones.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <footer class="footer">
+        <div class="footer-content">
+          <h3>InvoStore</h3>
+          <p>© 2025 InvoStore. Todos los derechos reservados.</p>
+          <p>Soluciones integrales para sistemas de acueducto desde 1995</p>
+          <p>📍 Dirección: Calle Principal 123, Ciudad Industrial</p>
+          <p>📞 Teléfono: +57 (1) 234-5678 | 📧 Email: info@invostore.com</p>
+
+          <div class="footer-links">
+            <a href="#politicas">Políticas de Privacidad</a>
+            <a href="#terminos">Términos y Condiciones</a>
+            <a href="#soporte">Soporte Técnico</a>
+            <a href="#contacto">Contacto</a>
+          </div>
+
+          <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.7">
+            Desarrollado con tecnología web moderna para brindar la mejor
+            experiencia de usuario
+          </p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      function showCategory(categoryId) {
+        // Ocultar todas las categorías
+        const allCategories = document.querySelectorAll(".category-content");
+        allCategories.forEach((category) => {
+          category.classList.remove("active");
+        });
+
+        // Remover clase active de todos los botones
+        const allButtons = document.querySelectorAll(".category-btn");
+        allButtons.forEach((button) => {
+          button.classList.remove("active");
+        });
+
+        // Mostrar la categoría seleccionada
+        const selectedCategory = document.getElementById(categoryId);
+        if (selectedCategory) {
+          selectedCategory.classList.add("active");
+        }
+
+        // Activar el botón correspondiente
+        const activeButton = event
+          ? event.target
+          : document.querySelector(".category-btn");
+        if (activeButton) {
+          activeButton.classList.add("active");
+        }
+
+        // Scroll suave hacia el contenido
+        document.querySelector(".content-area").scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+      }
+
+      // Efectos adicionales
+      document.addEventListener("DOMContentLoaded", function () {
+        // Animación de entrada para las tarjetas
+        const observerOptions = {
+          threshold: 0.1,
+          rootMargin: "0px 0px -50px 0px",
+        };
+
+        const observer = new IntersectionObserver(function (entries) {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = "0";
+              entry.target.style.transform = "translateY(30px)";
+              entry.target.style.transition = "all 0.6s ease";
+
+              setTimeout(() => {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+              }, 100);
+            }
+          });
+        }, observerOptions);
+
+        // Observar todas las tarjetas de productos
+        document.querySelectorAll(".product-card").forEach((card) => {
+          observer.observe(card);
+        });
+
+        // Efecto de hover mejorado para botones
+        document.querySelectorAll(".category-btn").forEach((button) => {
+          button.addEventListener("mouseenter", function () {
+            this.style.transform = "translateY(-3px) scale(1.02)";
+          });
+
+          button.addEventListener("mouseleave", function () {
+            if (!this.classList.contains("active")) {
+              this.style.transform = "translateY(0) scale(1)";
+            }
+          });
+        });
+      });
+
+      // Función para mejorar la accesibilidad
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Tab") {
+          document.body.classList.add("keyboard-navigation");
+        }
+      });
+
+      document.addEventListener("mousedown", function () {
+        document.body.classList.remove("keyboard-navigation");
+      });
+    </script>
+  </body>
 </html>

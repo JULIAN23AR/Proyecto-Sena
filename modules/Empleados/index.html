@@ -16,13 +16,13 @@
 
     <!-- Estilos personalizados -->
     <link rel="stylesheet" href="../users/Estilos/Style.css" />
-    <title>Usuarios</title>
+    <title>Empleados</title>
   </head>
   <body>
     <!-- Barra lateral azul -->
 
     <div class="d-flex" id="wrapper">
-      <nav id="sidebar" class="bg-primary">
+      <nav id="sidebar" class="bg-primary d-none">
         <div class="sidebar-header text-white d-flex justify-content-center">
           <i class="fa-solid fa-boxes-stacked me-2"></i>
           <span class="fw-bold">Inventario</span>
@@ -67,7 +67,7 @@
                 class="btn btn-primary"
                 onclick="window.location.href='/PROYECTO_SENA/auth/Formulario_Creacion/create_user.html'">
                 <i class="fa-solid fa-plus"></i>
-                Crear Usuario
+                Crear Empleado
               </button>
 
               <!-- Lista de Usuarios -->
@@ -86,7 +86,7 @@
         </nav>
 
         <section class="user-section mt-3 px-4 py-2">
-          <h2 class="mb-4 text-light fs-3">Lista de Usuarios</h2>
+          <h2 class="mb-4 text-light fs-3">Lista de Empleados</h2>
           <div class="table-responsive">
             <table class="table table-hover">
               <thead class="table-dark">
@@ -95,12 +95,11 @@
                   <th>Documento</th>
                   <th>Nombre</th>
                   <th>Apellido</th>
-                  <th>Teléfono</th>
                   <th>Correo Electrónico</th>
-                  <th>Contraseña</th>
                   <th>Área</th>
-                  <th>Fecha de Creación</th>
-                  <th>Rol</th>
+                  <th>Fecha de ingreso</th>
+                  <th>Cargo</th>
+                  <th>Salario</th>
                   <th>Estado</th> 
                   <th>Opciones</th>
                 </tr>
@@ -129,14 +128,14 @@
                   echo "<td>" . $user['apellido'] . "</td>";
                   echo "<td>" . $user['telefono'] . "</td>";
                   echo "<td>" . $user['correo_electronico'] . "</td>";
-                  echo "<td>" . $user['contrasena'] . "</td>";
+                  echo "<td><input type='password' value='********' style='border: none; background: none; outline: none;' readonly></td>";
                   echo "<td>" . $user['area'] . "</td>";
                   echo "<td>" . $user['fecha_registro'] . "</td>";
                   echo "<td>" . $user['rol'] . "</td>";
                   echo "<td>" . ($user['estado'] == 1 ? "Activo" : "Inactivo") . "</td>";
                   echo "<td>";
                   echo "<a href='edit_user.php?id_usuario=" . $user['id_usuario'] . "' class='btn-action btn btn-outline-warning btn-sm me-2'><i class='fa-solid fa-pen-to-square'></i></a>";
-                  echo "<a href='delete_user.php?id=" . $user['id_usuario'] . "' class='btn-action btn btn-outline-danger btn-sm'><i class='fa-solid fa-trash'></i></a>";
+                  echo "<a href='delete_user.php?id_usuario=" . $user['id_usuario'] . "' class='btn-action btn btn-outline-danger btn-sm'><i class='fa-solid fa-trash'></i></a>";
                   echo "</td>";
                   echo "</tr>";
                 }

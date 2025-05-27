@@ -195,7 +195,7 @@ $usuario = $consulta->fetch(PDO::FETCH_ASSOC);
 
         <div class="d-flex justify-content-between">
           <button type="submit" name="submit" class="btn btn-primary">Guardar</button>
-          <a href="../../modules/users/Index.php" class="btn btn-secondary"
+          <a href="../../modules/users/index.php" class="btn btn-secondary"
             >Cancelar</a
           >
         </div>
