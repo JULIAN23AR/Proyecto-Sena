@@ -1,24 +1,37 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* Contenedor general centrado */
 .form-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  padding: 20px;
-  background-color: #121212; /* Fondo oscuro */
+  background-color: #f1efec; /* Fondo oscuro */
 }
 
 /* Formulario */
 form {
-  width: 100%;
-  max-width: 600px;
-  background-color: #1f1f1f; /* Fondo oscuro para el formulario */
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  width: 50%;
+  min-width: 100px;
+  background-color: rgb(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Fondo oscuro para el formulario */
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
   display: grid;
   gap: 20px;
-  grid-template-columns: 1fr; /* Una sola columna */
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* Una sola columna */
   color: #fff; /* Texto blanco */
 }
 
@@ -29,6 +42,7 @@ form {
 }
 
 .form-label {
+  text-align: center;
   margin-bottom: 5px;
   font-weight: 600;
   color: #bbb; /* Color suave para el texto */
@@ -37,16 +51,21 @@ form {
 .form-control {
   padding: 12px;
   font-size: 16px;
-  border: 1px solid #444;
-  border-radius: 5px;
-  background-color: #2b2b2b; /* Fondo más oscuro para los inputs */
-  color: #fff;
-  transition: background-color 0.3s ease, border 0.3s ease;
+  border-radius: 10px;
+  background-color: rgb(
+    255,
+    255,
+    255,
+    0.95
+  ); /* Fondo más oscuro para los inputs */
+  color: #f1efec;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  border: none;
 }
 
 .form-control:focus {
-  background-color: #333;
-  border: 1px solid #007bff; /* Bordes azules en focus */
+  background-color: rgb(255, 255, 255, 0.95);
+  border: none;
   outline: none;
 }
 
@@ -126,7 +145,8 @@ a.btn-secondary:hover {
     align-items: center;
   }
 
-  .d-flex button, .d-flex a {
+  .d-flex button,
+  .d-flex a {
     width: 100%;
     margin-top: 10px;
   }

@@ -24,14 +24,13 @@ body {
   background-color: #123458;
   padding: 30px;
   text-align: center;
-  color: white;
+  color: #f1efec;
   position: relative;
 }
 
 .header h1 {
   font-size: 2.5rem;
   margin-bottom: 10px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .header p {
@@ -50,7 +49,7 @@ body {
 
 .category-btn {
   background-color: #123458;
-  color: white;
+  color: #f1efec;
   border: none;
   padding: 15px 25px;
   border-radius: 15px;
@@ -66,24 +65,31 @@ body {
 }
 
 .category-btn:hover {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-  background: linear-gradient(135deg, #123458 20%, #dfe1e9b1 10%);
-  color: #000;
+  background: linear-gradient(135deg, #123458 10%, #dfe1e9b1 50%);
+  color: #020313;
 }
 
 .category-btn.active {
   background: linear-gradient(135deg, #0203136e 50%, #123458 50%);
   transform: translateY(-3px);
 }
+
+.category-btn.active:hover {
+  background: none;
+}
 .category-btn.login {
-  background-color: #030303;
+  background-color: #f1efec;
+  color: #123458;
   margin-left: 50px;
 }
 
 .content-area {
   padding: 40px;
   min-height: 400px;
+  /* background-image: url(../main/img/Usuarios.jpg);
+  opacity: ; */
 }
 
 .category-content {
@@ -126,7 +132,7 @@ body {
 }
 
 .product-grid::-webkit-scrollbar-thumb {
-  background: #0000;
+  background: #020313;
   border-radius: 4px;
 }
 
@@ -135,7 +141,7 @@ body {
 }
 
 .product-card {
-  background: white;
+  background: f1efec;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
@@ -150,7 +156,6 @@ body {
 .product-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 20px 30px rgba(5, 38, 110, 0.68);
-  border-color: #0325435b;
 }
 
 .product-image {
@@ -159,8 +164,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
-  font-size: 3rem;
+  color: #f1efec;
+  font-size: 5rem;
   position: relative;
   overflow: hidden;
 }
@@ -184,20 +189,20 @@ body {
 }
 
 .product-info h3 {
-  color: #333;
+  color: #123458;
   margin-bottom: 10px;
   font-size: 1.3rem;
 }
 
 .product-info p {
-  color: #666;
+  color: #020313;
   line-height: 1.6;
 }
 
 .welcome-message {
   text-align: center;
   padding: 60px 20px;
-  color: #555;
+  color: #020313;
 }
 
 .welcome-message h2 {
@@ -214,8 +219,8 @@ body {
 }
 
 .footer {
-  background: #333;
-  color: white;
+  background: #020313;
+  color: #f1efec;
   padding: 30px;
   text-align: center;
   margin-top: auto;
@@ -228,7 +233,7 @@ body {
 
 .footer h3 {
   margin-bottom: 15px;
-  color: #b6bee3;
+  color: #dfe1e9b1;
 }
 
 .footer p {
@@ -245,13 +250,14 @@ body {
 }
 
 .footer-links a {
-  color: #4361ee;
+  color: #3352db;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
   color: #667eea;
+  transition: 0.3s;
 }
 
 @media (max-width: 768px) {
