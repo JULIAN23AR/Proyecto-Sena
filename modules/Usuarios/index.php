@@ -16,7 +16,7 @@
       crossorigin="anonymous"></script>
 
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="../Usuarios/Estilos/Style.css" />
+    <link rel="stylesheet" href="../../diseñoWeb/Estilos/style.css" />
     <title>Usuarios</title>
   </head>
   <body>
@@ -31,23 +31,23 @@
         <ul class="list-content list-unstyled fs-7">
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="../../main/index.html">Inicio</a>
+            <a href="../Clientes/index.php">Clientes</a>
           </li>
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="../products/index.php">Productos</a>
+            <a href="../Empleados/index.php">Empleados</a>
           </li>
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#">Empleados</a>
+            <a href="../Productos/index.php">Productos</a>
           </li>
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#">Proveedores</a>
+            <a href="../Usuarios/index.php">Usuarios</a>
           </li>
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#">Usuarios</a>
+            <a href="../Vendedores/index.php">Vendedores</a>
           </li>
         </ul>
       </nav>
@@ -76,10 +76,11 @@
                 class="form-list form-select-sm w-auto"
                 name="option"
                 id="option">
-                <option value="1">Usuario</option>
-                <option value="2">Productos</option>
-                <option value="3">Proveedores</option>
-                <option value="4">Empleados</option>
+                <option value="4">Clientes</option>
+                <option value="2">Empleados</option>
+                <option value="3">Productos</option>
+                <option value="1">Usuarios</option>
+                <option value="5">Vendedores</option>
               </select>
             </div>
             <!-- Button trigger modal -->
@@ -136,8 +137,8 @@
                   echo "<td>" . $user['rol'] . "</td>";
                   echo "<td>" . ($user['estado'] == 1 ? "Activo" : "Inactivo") . "</td>";
                   echo "<td>";
-                  echo "<a href='edit_user.php?id_usuario=" . $user['id_usuario'] . "' class='btn-action btn btn-outline-warning btn-sm me-2'><i class='fa-solid fa-pen-to-square'></i></a>";
-                  echo "<a href='delete_user.php?id_usuario=" . $user['id_usuario'] . "' class='btn-action btn btn-outline-danger btn-sm'><i class='fa-solid fa-trash'></i></a>";
+                  echo "<a href='editar.php?id_usuario=" . $user['id_usuario'] . "' class='btn-action btn btn-outline-warning btn-sm me-2'><i class='fa-solid fa-pen-to-square'></i></a>";
+                  echo "<a href='eliminar.php?id_usuario=" . $user['id_usuario'] . "' class='btn-action btn btn-outline-danger btn-sm'><i class='fa-solid fa-trash'></i></a>";
                   echo "</td>";
                   echo "</tr>";
                 }

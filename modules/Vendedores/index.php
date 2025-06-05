@@ -15,8 +15,8 @@
       crossorigin="anonymous"></script>
 
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="../users/Estilos/Style.css" />
-    <title>Empleados</title>
+    <link rel="stylesheet" href="../../diseñoWeb/Estilos/style.css" />
+    <title>Vendedores</title>
   </head>
   <body>
     <!-- Barra lateral azul -->
@@ -30,23 +30,23 @@
         <ul class="list-content list-unstyled fs-7">
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#">Inicio</a>
+            <a href="../Clientes/index.php">Clientes</a>
           </li>
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#">Productos</a>
+            <a href="../Empleados/index.php">Empleados</a>
           </li>
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#">Empleados</a>
+            <a href="../Productos/index.php">Productos</a>
           </li>
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#">Proveedores</a>
+            <a href="../Usuarios/index.php">Usuarios</a>
           </li>
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#">Usuarios</a>
+            <a href="../Vendedores/index.php">Vendedores</a>
           </li>
         </ul>
       </nav>
@@ -67,7 +67,7 @@
                 class="btn btn-primary"
                 onclick="window.location.href='/PROYECTO_SENA/auth/Formulario_Creacion/create_user.html'">
                 <i class="fa-solid fa-plus"></i>
-                Crear Empleado
+                Crear Vendedor
               </button>
 
               <!-- Lista de Usuarios -->
@@ -75,32 +75,29 @@
                 class="form-list form-select-sm w-auto"
                 name="option"
                 id="option">
-                <option value="1">Usuario</option>
-                <option value="2">Productos</option>
-                <option value="3">Proveedores</option>
-                <option value="4">Empleados</option>
+                <option value="5">Clientes</option>
+                <option value="2">Empleados</option>
+                <option value="3">Productos</option>
+                <option value="4">Usuarios</option>
+                <option value="1">Vendedores</option>
               </select>
             </div>
             <!-- Button trigger modal -->
           </div>
         </nav>
 
-        <section class="user-section mt-3 px-4 py-2">
-          <h2 class="mb-4 text-light fs-3">Lista de Empleados</h2>
+        <section class="vendedor-section mt-3 px-4 py-2">
+          <h2 class="mb-4 text-light fs-3">Lista de Vendedores</h2>
           <div class="table-responsive">
             <table class="table table-hover">
               <thead class="table-dark">
                 <tr>
-                  <th>id</th>
-                  <th>Documento</th>
+                  <th>Vendedor</th>
+                  <th>Usuario</th>
                   <th>Nombre</th>
-                  <th>Apellido</th>
-                  <th>Correo Electrónico</th>
-                  <th>Área</th>
-                  <th>Fecha de ingreso</th>
-                  <th>Cargo</th>
-                  <th>Salario</th>
-                  <th>Estado</th> 
+                  <th>Razon Social</th>
+                  <th>NIT</th>
+                  <th>Dirección</th>
                   <th>Opciones</th>
                 </tr>
               </thead>
@@ -112,30 +109,25 @@
                 include "../../components/conexion.php";
 
                 // Consulta para obtener los usuarios
-                $SQL =  "SELECT * FROM usuarios";
+                $SQL =  "SELECT * FROM vendedores";
 
                 // Ejecutar la consulta
                 $consulta = $conexion->prepare($SQL);
                 $consulta ->execute();
-                $users = $consulta ->fetchall(PDO::FETCH_ASSOC);
+                $vendedores = $consulta ->fetchall(PDO::FETCH_ASSOC);
 
                 // Mostrar los usuarios en la tabla
-                foreach ($users as $user) {
+                foreach ($vendedores as $vendedor) {
                   echo "<tr>";
-                  echo "<td>" . $user['id_usuario'] . "</td>";
-                  echo "<td>" . $user['documento'] . "</td>";
-                  echo "<td>" . $user['nombre'] . "</td>";
-                  echo "<td>" . $user['apellido'] . "</td>";
-                  echo "<td>" . $user['telefono'] . "</td>";
-                  echo "<td>" . $user['correo_electronico'] . "</td>";
-                  echo "<td><input type='password' value='********' style='border: none; background: none; outline: none;' readonly></td>";
-                  echo "<td>" . $user['area'] . "</td>";
-                  echo "<td>" . $user['fecha_registro'] . "</td>";
-                  echo "<td>" . $user['rol'] . "</td>";
-                  echo "<td>" . ($user['estado'] == 1 ? "Activo" : "Inactivo") . "</td>";
+                  echo "<td>" . $vendedor['id_vendedor'] . "</td>";
+                  echo "<td>" . $vendedor['id_usuario'] . "</td>";
+                  echo "<td>" . $vendedor['nombre'] . "</td>";
+                  echo "<td>" . $vendedor['razon_social'] . "</td>";
+                  echo "<td>" . $vendedor['nit'] . "</td>";
+                  echo "<td>" . $vendedor['direccion'] . "</td>";
                   echo "<td>";
-                  echo "<a href='edit_user.php?id_usuario=" . $user['id_usuario'] . "' class='btn-action btn btn-outline-warning btn-sm me-2'><i class='fa-solid fa-pen-to-square'></i></a>";
-                  echo "<a href='delete_user.php?id_usuario=" . $user['id_usuario'] . "' class='btn-action btn btn-outline-danger btn-sm'><i class='fa-solid fa-trash'></i></a>";
+                  echo "<a href='editar.php?id_vendedor=" . $vendedor['id_vendedor'] . "' class='btn-action btn btn-outline-warning btn-sm me-2'><i class='fa-solid fa-pen-to-square'></i></a>";
+                  echo "<a href='eliminar.php?id_vendedor=" . $vendedor['id_vendedor'] . "' class='btn-action btn btn-outline-danger btn-sm'><i class='fa-solid fa-trash'></i></a>";
                   echo "</td>";
                   echo "</tr>";
                 }
