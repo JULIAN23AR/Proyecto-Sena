@@ -15,7 +15,7 @@
       crossorigin="anonymous"></script>
 
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="../users/Estilos/Style.css" />
+    <link rel="stylesheet" href="../../diseñoWeb/Estilos/style.css" />
     <title>Productos</title>
   </head>
   <body>
@@ -30,23 +30,23 @@
         <ul class="list-content list-unstyled fs-7">
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#">Inicio</a>
+            <a href="../Clientes/index.php">Clientes</a>
           </li>
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#">Productos</a>
+            <a href="../Empleados/index.php">Empleados</a>
           </li>
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#">Empleados</a>
+            <a href="../Productos/index.php">Productos</a>
           </li>
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#">Proveedores</a>
+            <a href="../Usuarios/index.php">Usuarios</a>
           </li>
           <li>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#">Usuarios</a>
+            <a href="../Vendedores/index.php">Vendedores</a>
           </li>
         </ul>
       </nav>
@@ -75,10 +75,11 @@
                 class="form-list form-select-sm w-auto"
                 name="option"
                 id="option">
-                <option value="1">Usuario</option>
-                <option value="2">Productos</option>
-                <option value="3">Proveedores</option>
-                <option value="4">Empleados</option>
+                <option value="3">Clientes</option>
+                <option value="2">Empleados</option>
+                <option value="1">Productos</option>
+                <option value="4">Usuarios</option>
+                <option value="5">Vendedores</option>
               </select>
             </div>
             <!-- Button trigger modal -->
@@ -98,6 +99,7 @@
                   <th>Stock</th>
                   <th>Imagen</th>
                   <th>Estado</th>
+                  <th>Fecha Registro</th>
                   <th>id_categoria</th>
                   <th>id_vendedor</th>
                   <th>Opciones</th>
@@ -132,8 +134,8 @@
                   echo "<td>" . $product['id_categoria'] . "</td>";
                   echo "<td>" . $product['id_vendedor'] . "</td>";
                   echo "<td>";
-                  echo "<a href='edit_product.php?id_producto=" . $product['id_producto'] . "' class='btn-action btn btn-outline-warning btn-sm me-2'><i class='fa-solid fa-pen-to-square'></i></a>";
-                  echo "<a href='delete_product.php?id_producto=" . $product['id_producto'] . "' class='btn-action btn btn-outline-danger btn-sm'><i class='fa-solid fa-trash'></i></a>";
+                  echo "<a href='editar.php?id_producto=" . $product['id_producto'] . "' class='btn-action btn btn-outline-warning btn-sm me-2'><i class='fa-solid fa-pen-to-square'></i></a>";
+                  echo "<a href='eliminar.php?id_producto=" . $product['id_producto'] . "' class='btn-action btn btn-outline-danger btn-sm'><i class='fa-solid fa-trash'></i></a>";
                   echo "</td>";
                   echo "</tr>";
                 }

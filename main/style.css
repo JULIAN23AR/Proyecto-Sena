@@ -138,11 +138,28 @@ body {
     display: flex;
     justify-content: center;
     overflow-y: auto;
-    gap: 10px;
-    margin: 0;
-    padding: 20px;
+    gap: 30px;
+    margin: 30px 0;
+    padding: 40px;
     scroll-behavior: smooth;
-    flex-wrap: wrap;
+}
+
+.product-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.product-grid::-webkit-scrollbar-track {
+    background: #f1efec;
+    border-radius: 4px;
+}
+
+.product-grid::-webkit-scrollbar-thumb {
+    background: #020313;
+    border-radius: 4px;
+}
+
+.product-grid::-webkit-scrollbar-thumb:hover {
+    background: #123458;
 }
 
 .product-card {
