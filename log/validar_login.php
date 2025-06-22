@@ -6,11 +6,14 @@ session_start();
 include "../components/conexion.php";
 
 #Capturamos las variables de inicio de sesión
-$correo = $_POST["correo"];
+$correo = $_POST["email"];
 $password = $_POST["password"];
 
 #Consultamos las variables e inicializamos la conexion
-$SQL = "SELECT * FROM usuarios WHERE correo_electronico = :correo_electronico";
+$SQL = "SELECT * FROM usuarios WHERE correo_electronico = ':correo_electronico' ";
+// echo $SQL;
+// die(); // Para depuración, eliminar en producción
+
 $consulta = $conexion->prepare($SQL);
 $consulta->bindParam(":correo_electronico", $correo); 
 $consulta->execute();
