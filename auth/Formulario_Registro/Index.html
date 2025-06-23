@@ -7,21 +7,23 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-      crossorigin="anonymous" />
+      crossorigin="anonymous"
+    />
     <script
       src="https://kit.fontawesome.com/eeb2293ae5.js"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="../Formulario_Registro/Estilos/style.css" />
-    <title>Registro</title>
+    <title>Crear Cuenta</title>
   </head>
   <body>
-    <div class="container-form animate__animated animate__fadeInDown">
-      <div class="icon-form text-center mb-4">
-        <i class="fa-solid fa-user-plus fa-3x"></i>
+    <div class="container-form">
+      <div class="icon-form text-center">
+        <i class="fa-solid fa-user-plus"></i>
         <h1 class="text-center">Registrarse</h1>
       </div>
       <form class="form-content" action="#" method="POST">
-        <div class="item-form mb-3">
+        <div class="item-form">
           <label for="name" class="form-label">Nombre del Usuario</label>
           <input
             type="text"
@@ -31,9 +33,10 @@
             placeholder="Nombres"
             required
             autocomplete="off"
-            minlength="4" />
+            minlength="4"
+          />
         </div>
-        <div class="item-form mb-3">
+        <div class="item-form">
           <label for="apellido" class="form-label">Apellido del Usuario</label>
           <input
             type="text"
@@ -43,22 +46,97 @@
             placeholder="Apellidos"
             required
             autocomplete="off"
-            minlength="4" />
+            minlength="4"
+          />
         </div>
-        <div class="item-form mb-3">
-          <label for="email" class="form-label" id="email"
+        <div class="item-form">
+          <label for="tdocumento" class="form-label">Tipo Documento</label>
+          <input
+            type="text"
+            class="form-control"
+            id="tdocumento"
+            name="tdocumento"
+            placeholder="Tip Documento"
+            required
+          />
+        </div>
+        <div class="item-form ">
+          <label for="documento" class="form-label">Documento</label>
+          <input
+            type="text"
+            class="form-control"
+            id="documento"
+            name="documento"
+            placeholder="# Documento"
+            required
+            minlength="6"
+          />
+        </div>
+        <div class="item-form ">
+          <label for="fnacimiento" class="form-label">Fecha Nacimiento</label>
+          <input
+            type="date"
+            class="form-control"
+            id="fnacimiento"
+            name="fnacimiento"
+            placeholder="Fecha de Nacimiento"
+            required
+          />
+        </div>
+        <div class="item-form ">
+          <label for="direccion" class="form-label">Dirección</label>
+          <input
+            type="text"
+            class="form-control"
+            id="direccion"
+            name="direccion"
+            placeholder="Dirección"
+            required
+            minlength="10"
+          />
+        </div>
+        <div class="item-form ">
+          <label for="correo" class="form-label" id="correo1"
             >Correo del Usuario</label
           >
           <input
             type="email"
             class="form-control"
-            id="email"
-            name="email"
-            placeholder="Correo"
+            id="correo1"
+            name="correo1"
+            placeholder="Correo Electronico"
             required
-            autocomplete="off" />
+            autocomplete="on"
+          />
         </div>
-        <div class="item-form mb-3">
+        <div class="item-form ">
+          <label for="correo" class="form-label" id="correo2"
+            >Confirmar Correo</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            id="correo2"
+            name="correo2"
+            placeholder="Correo Electronico"
+            required
+            autocomplete="on"
+          />
+        </div>
+        <div class="item-form ">
+          <label for="telefono" class="form-label">Teléfono</label>
+          <input
+            type="text"
+            class="form-control"
+            id="numero"
+            name="numero"
+            placeholder="Numero Teléfonico"
+            required
+            autocomplete="off"
+            minlength="7"
+          />
+        </div>
+        <div class="item-form ">
           <label for="password" class="form-label">Contraseña</label>
           <input
             type="password"
@@ -68,9 +146,16 @@
             placeholder="Crear Contraseña"
             required
             autocomplete="off"
-            minlength="6" />
+            minlength="6"
+          />
         </div>
-        <button type="submit" class="btn btn-primary">Registrarse</button>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Crear cuenta</button>
+          <div class="login-link">
+            <span>¿Ya tienes una cuenta?</span>
+            <a href="login.html">Iniciar sesión</a>
+          </div>
+        </div>
       </form>
     </div>
   </body>

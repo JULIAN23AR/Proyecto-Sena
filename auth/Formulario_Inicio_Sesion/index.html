@@ -1,51 +1,44 @@
 <!DOCTYPE html>
 <html lang="es" data-bs-theme="dark">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Inicio Sesión</title>
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7"
-            crossorigin="anonymous"
-        />
-        <script src="https://kit.fontawesome.com/eeb2293ae5.js" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="../Formulario_Inicio_Sesion/Estilos/style.css">
 
-    <body>
-        <div class="container-form">
-            <div class="icon-form text-center mb-4">
-                <i class="fa-solid fa-circle-user fa-5x"></i>
-                <h1 class="text-center">Iniciar Sesión</h1>
-            </div>
-            <form class="form-content" action="../PROYECTO_SENA/modules/Usuarios/index.php" method="POST">
-                <div class="item-form mb-3">
-                    <label for="email" class="form-label">Correo del Usuario</label>
-                    <input type="email" class="form-control" id="email" name="email" placeholder="Correo" required />
-                </div>
-                <div class="item-form mb-3">
-                    <label for="password" class="form-label">Contraseña</label>
-                    <input
-                        type="password"
-                        class="form-control"
-                        id="password"
-                        name="password"
-                        placeholder="Contraseña"
-                        maxlength="20"
-                        minlength="8"
-                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-                        required
-                    />
-                </div>
-                <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
-                <button type="reset" class="btn btn-secondary">Limpiar</button>
-            </form>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inicio Sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/eeb2293ae5.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Formulario_Inicio_Sesion/Estilos/style.css">
+
+<body>
+    <div class="container-form">
+        <div class="icon-form text-center mb-4">
+            <i class="fa-solid fa-circle-user fa-4x"></i>
+            <h1 class="text-center">Iniciar Sesión</h1>
         </div>
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+        <form class="form-content" action="../../modules/Usuarios/index.php" method="POST">
+            <div class="item-form mb-3">
+                <label for="email" class="form-label">Correo Personal o Educativo</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Correo" required />
+            </div>
+            <div class="item-form mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña"
+                    maxlength="20" minlength="8" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required />
+            </div>
+            <div class="button-container">
+                <button type="submit" class="btn btn-primary">Sign In</button>
+                <button type="submit" class="btn btn-primary">Sign Up</button>
+            </div>
+            <div class="account-recovery">
+                <a href="#">¿Olvidaste tu contraseña?</a>
+                <a href="#">¿No puedes acceder a tu cuenta?</a>
+            </div>
+        </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>
